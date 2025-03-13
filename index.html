@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testes FlexBox</title>
+    <title>Testes Flexbox</title>
     <style>
         * {
             font-size: 16px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0rem;
         }
 
         .cabecalho {
@@ -18,8 +19,8 @@
         }
 
         .container {
-            border: 1px solid gray;
-            box-shadow: 0.5rem 0.5rem .3rem .01rem gray;
+            border: 1px solid #c2c2c2;
+            box-shadow: 0.5rem .5rem .3rem .01rem #c2c2c2;
             height: 35rem;
             display: flex;
             flex-wrap: wrap;
@@ -31,10 +32,7 @@
             color: white;
             font-weight: bold;
             padding: 1rem;
-            margin: .1rem;
-
-
-            width: 3rem;
+            width: 5em;
             height: 3rem;
         }
 
@@ -46,29 +44,39 @@
             flex-grow: 12;
         }
 
-        .menu-sandwich {
+        .sandwich-menu {
             flex-grow: 1;
         }
 
-        .menu-lateral {
-            padding: 1rem;
-            margin: .1rem;
+        .painel {
+            height: 30rem;
+            display: flex;
+        }
 
-            border: 1px solid green;
+        .menu-lateral {
+
             flex-grow: 3;
         }
 
         .parte-principal {
+            border: 3px solid green;
             padding: 1rem;
-            margin: .1rem;
-
-            border: 1px solid green;
+            margin: .1rem 0rem;
             flex-grow: 11;
         }
 
-        .painel {
-            display: flex;
-height: 30rem;
+        .tile {
+            background-color: #e3e3e3;
+            height: 3rem;
+            margin: .5rem
+        }
+
+        .tile:hover {
+            background-color: blue;
+            color: white;
+        }
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -76,19 +84,26 @@ height: 30rem;
 <body>
     <header class="cabecalho">
         <div class="item logo">Logo</div>
-        <div class="item titulo-do-site">Titulo do Site</div>
-        <div class="item menu-sandwich">Menu</div>
-        <section class="painel">
-            <nav class="menu-lateral">
-                Navegação
-            </nav>
-            <main class="parte-principal">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum reprehenderit quod possimus
-                architecto laudantium, ipsa distinctio illum quaerat magnam voluptates reiciendis rem alias deleniti
-                iure ratione delectus similique nobis excepturi.
-            </main>
-        </section>
+        <div class="item titulo-do-site">Título do Site</div>
+        <div class="item sandwich-menu">Menu</div>
     </header>
+    <section class="painel">
+        <nav class="menu-lateral">
+            <a href="https://www.google.com.br">
+                <div class="tile">item 01</div>
+            </a>
+            <a href="https://www.pucminas.br/destaques/Paginas/default.aspx">
+                <div class="tile">item 02</div>
+            </a>
+            <a href="https://www.microsoft.com">
+                <div class="tile">item 03</div>
+            </a>
+            <a href="https://www.primevideo.com/">
+                <div class="tile">item 04</div>
+            </a>
+        </nav>
+        <main class="parte-principal">Parte principal do site</main>
+    </section>
 </body>
 
 </html>
