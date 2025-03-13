@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,17 @@
             font-size: 16px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        .cabecalho {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
+        }
+
         .container {
             border: 1px solid gray;
             box-shadow: 0.5rem 0.5rem .3rem .01rem gray;
-            height:  35rem;
+            height: 35rem;
             display: flex;
             flex-wrap: wrap;
             align-content: start;
@@ -24,41 +32,63 @@
             font-weight: bold;
             padding: 1rem;
             margin: .1rem;
-        
-            border: 1px solid gray;
-            box-shadow: 0.5rem 0.5rem .3rem .01rem gray;
+
+
             width: 3rem;
             height: 3rem;
         }
 
-        .logo{
+        .logo {
             flex-grow: 1;
         }
 
-        .titulo-do-site{
+        .titulo-do-site {
             flex-grow: 12;
         }
 
-        .menu-sandwich{
+        .menu-sandwich {
             flex-grow: 1;
+        }
+
+        .menu-lateral {
+            padding: 1rem;
+            margin: .1rem;
+
+            border: 1px solid green;
+            flex-grow: 3;
+        }
+
+        .parte-principal {
+            padding: 1rem;
+            margin: .1rem;
+
+            border: 1px solid green;
+            flex-grow: 11;
+        }
+
+        .painel {
+            display: flex;
+height: 30rem;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="item logo">Item 01</div>
-        <div class="item titulo-do-site">Item 02</div>
-        <div class="item menu-sandwich">Item 03</div>
-      <!--  <div class="item">Item 04</div>
-        <div class="item">Item 05</div>
-        <div class="item">Item 06</div>
-        <div class="item">Item 07</div>
-        <div class="item">Item 08</div>
-        <div class="item">Item 09</div>
-        <div class="item">Item 10</div>
-        <div class="item">Item 11</div>
-        <div class="item">Item 12</div>-->
 
-    </div>
+<body>
+    <header class="cabecalho">
+        <div class="item logo">Logo</div>
+        <div class="item titulo-do-site">Titulo do Site</div>
+        <div class="item menu-sandwich">Menu</div>
+        <section class="painel">
+            <nav class="menu-lateral">
+                Navegação
+            </nav>
+            <main class="parte-principal">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum reprehenderit quod possimus
+                architecto laudantium, ipsa distinctio illum quaerat magnam voluptates reiciendis rem alias deleniti
+                iure ratione delectus similique nobis excepturi.
+            </main>
+        </section>
+    </header>
 </body>
+
 </html>
